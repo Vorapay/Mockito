@@ -15,7 +15,7 @@ public class MovieManager {
     // Добавление нового фильма.
     public void addNewMovie(String movie) {
         String[] tmp = new String[movies.length + 1];
-        for (int i = 0; i < movies.length + 1; i++) {
+        for (int i = 0; i < movies.length; i++) {
             tmp[i] = movies[i];
         }
         tmp[tmp.length - 1] = movie;
@@ -27,7 +27,7 @@ public class MovieManager {
         return movies;
     }
 
-    // Вывод максимально лимит* штук последних добавленных фильмов в обратном от добавления порядке.
+    // Вывод максимальный лимит штук последних добавленных фильмов в обратном от добавления порядке.
     public String[] findLimit() {
         int resultLength;
         if (movies.length < lastMovies) {
